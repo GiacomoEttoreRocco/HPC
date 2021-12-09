@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
+
 
 int indice(int col, int row_dim, int n_row, int matr_dim, int n_matr){
     int res = col + row_dim*n_row + matr_dim*n_matr;
@@ -22,9 +24,9 @@ int main(int argc, char *argv[]){
     int row_dim = atoi(argv[2]);
     int matr_dim = atoi(argv[3]);
     int const n_elementi = row_dim * matr_dim * col_dim;
+
     double* tens0 = (double*)malloc(__SIZEOF_DOUBLE__*n_elementi);
     double* tens1 = (double*)malloc(__SIZEOF_DOUBLE__*n_elementi);
-
     double* res = (double*)malloc(__SIZEOF_DOUBLE__*n_elementi);
 
     for(int k = 0; k < matr_dim; k++){
@@ -36,11 +38,15 @@ int main(int argc, char *argv[]){
             }
         }
     }
+
+    //double start = 
+    clock_t begin = clock();
     for(int p = 0; p < matr_dim*row_dim*col_dim; p++){
         res[p] = tens0[p] + tens1[p];
     }
     //print_matrix(matr, col_dim, row_dim, 0);    
-    //print_matrix(matr, col_dim, row_dim, 1);    
+    //print_matrix(matr, col_dim, row_dim, 1);   
+    /* 
     for(int i = 0; i < row_dim*col_dim*matr_dim; i++){
         if(i%row_dim == 0){
             printf("\n");
@@ -50,4 +56,9 @@ int main(int argc, char *argv[]){
         }
         printf(" %0.1lf ", res[i]);
     }
+    */
+    clock_t end = clock();
+    double time = (double)(end - begin)/CLOCKS_PER_SEC*1000; 
+    printf("Seriale ci ho messo %0.3lf, dimensione %dx%dx%d\n", time, col_dim, row_dim,matr_dim);
+
 }

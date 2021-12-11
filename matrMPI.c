@@ -5,11 +5,29 @@
 #define INIT MPI_Init(&argc, &argv);
 #define END MPI_Finalize();
 
+<<<<<<< HEAD
 int indice(int col, int row_dim, int n_row, int col_dim, int n_matr){
     int res = col + col_dim*n_row + col_dim*row_dim*n_matr;
     return res;
 }
 
+=======
+int indice(int col, int row_dim, int n_row, int matr_dim, int n_matr){
+    int res = col + row_dim*n_row + matr_dim*n_matr;
+    return res;
+}
+
+void print_matrix(double matrix[], int dim_row, int dim_col, int n_matrix){
+    for(int i = 0; i < dim_row; i++){
+        for(int j = 0; j < dim_col; j++){
+            printf("id: %d ", i*dim_row+j + n_matrix*dim_row*dim_col);
+            printf("val: %0.1lf     ", matrix[i*dim_row+j+n_matrix*dim_row*dim_col]);
+        }
+        printf("\n");
+    }
+}
+
+>>>>>>> 69ccefda4c878b19b5ed1145ca92c72ef5e3996a
 int main(int argc, char *argv[]){
 
     INIT
@@ -28,9 +46,12 @@ int main(int argc, char *argv[]){
 
     int np, rank;
 
+<<<<<<< HEAD
     int seed = 11345;
     srand48(seed);
 
+=======
+>>>>>>> 69ccefda4c878b19b5ed1145ca92c72ef5e3996a
     MPI_Comm_size(MPI_COMM_WORLD, &np);
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
 
@@ -43,8 +64,13 @@ int main(int argc, char *argv[]){
         for(int k = 0; k < matr_dim; k++){
             for(int j = 0; j <row_dim; j++){
                 for(int i = 0; i <col_dim; i++){
+<<<<<<< HEAD
                     tens0[indice(i, row_dim, j, col_dim, k)] = k;
                     tens1[indice(i, row_dim, j, col_dim, k)] = 2*k;
+=======
+                    tens0[indice(i, row_dim, j, row_dim*col_dim, k)] = k;
+                    tens1[indice(i, row_dim, j, row_dim*col_dim, k)] = 2*k;
+>>>>>>> 69ccefda4c878b19b5ed1145ca92c72ef5e3996a
                 }
             }
         }
@@ -77,7 +103,10 @@ int main(int argc, char *argv[]){
             }
             printf(" %0.1lf ", res[i]);
         }
+<<<<<<< HEAD
         printf("\n");
+=======
+>>>>>>> 69ccefda4c878b19b5ed1145ca92c72ef5e3996a
     }
     */
     /*
@@ -86,6 +115,7 @@ int main(int argc, char *argv[]){
     free(local_res);
     */
     double time = (MPI_Wtime() - start)*1000;
+<<<<<<< HEAD
     MPI_Barrier(MPI_COMM_WORLD);
     //printf("The process %d took %0.3lfms, the size of the matrices is: %dx%dx%d\n", rank, time, col_dim, row_dim,matr_dim);
     //printf("The last matrix is (or should be) composed by: %d-1+%d-1+%d-1\n", col_dim, row_dim, matr_dim);  
@@ -95,6 +125,10 @@ int main(int argc, char *argv[]){
     if(rank == 0) {
         printf("The mean of all processes is %0.3lfms.\n", mean);
     }
+=======
+    
+    printf("Sono il processo %d e ci ho messo %0.3lf, dimensione %dx%dx%d\n", rank, time, col_dim, row_dim,matr_dim);
+>>>>>>> 69ccefda4c878b19b5ed1145ca92c72ef5e3996a
 
     END
 }

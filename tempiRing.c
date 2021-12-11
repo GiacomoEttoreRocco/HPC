@@ -29,14 +29,14 @@ int main(int argc, char *argv[]){
         cnt++; 
     }   
     double time = MPI_Wtime() - start;
-    printf("I am process %d and i have received %d messages. My final messages have tag %d and value %d, %d\nThe execution time is %lf ms\n",
-    rank, 2*cnt, tag, buffer[0], buffer[1], time*1000);
+    //printf("I am process %d and i have received %d messages. My final messages have tag %d and value %d, %d\nThe execution time is %lf ms\n",rank, 2*cnt, tag, buffer[0], buffer[1], time*1000);
     MPI_Barrier(ring);
 //-------------------- CALCOLO MEDIA----------------------
     double sum = 0;
     MPI_Reduce(&time, &sum, 1, MPI_DOUBLE, MPI_SUM, 0, ring);
     if(rank == 0) {
-        printf("The mean of all processes is %0.3lfms.\n", (sum/np)*1000);
+        //printf("The mean of all processes is %0.3lfms.\n", (sum/np)*1000);
+        printf("%0.10lfms\n", (sum/np)*1000);
     }
 //--------------------------------------------------------
 

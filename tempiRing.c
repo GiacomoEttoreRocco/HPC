@@ -17,10 +17,10 @@ double main(int argc, char *argv[]){
     MPI_Comm_rank(ring, &rank);
     tag = rank; 
     double sum, mean, start, time;
-    for(int rep = 0; rep < 10; rep++){
+    for(int rep = 0; rep < 500; rep++){
         sum = 0;
         start = MPI_Wtime();
-        for(int cycle = 0; cycle < 50; cycle++){
+        for(int cycle = 0; cycle < 10000; cycle++){
             buffer[0] = 0; // azzeriamo il buffer, come se iniziassimo un nuovo ciclo completamente nuovo.
             buffer[1] = 0; 
             while(cnt < np){ //while(cnt < np)
@@ -46,7 +46,8 @@ double main(int argc, char *argv[]){
         if(rank == 0) {
             //printf("The mean of all processes is %0.3lfms.\n", (sum/np)*1000);
             mean = (sum/(np*1.0)*1000);
-            printf("%d processors, mean time: %0.8lf ms\n", np, mean);
+            //printf("%d processors, mean time: %0.8lf ms\n", np, mean);
+            printf("%0.8lf\n", mean);
         }    
     //--------------------------------------------------------
     }

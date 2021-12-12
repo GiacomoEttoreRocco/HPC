@@ -2,6 +2,5 @@
 #cd $PBS_O_WORKDIR
 for i in {2..24}
 do
-    touch timesRing/$i.txt
-    mpirun -np $i ./tring > timesRing/$i.txt
+    mpirun -np $i ./tring 1>$i.txt 2>null
 done

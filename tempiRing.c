@@ -17,10 +17,10 @@ double main(int argc, char *argv[]){
     MPI_Comm_rank(ring, &rank);
     tag = rank; 
     double sum, mean, start, time;
-    for(int rep = 0; rep < 500; rep++){
+    for(int rep = 0; rep < 1000; rep++){
         sum = 0;
         start = MPI_Wtime();
-        for(int cycle = 0; cycle < 10000; cycle++){
+        for(int cycle = 0; cycle < 1000; cycle++){
             buffer[0] = 0; // azzeriamo il buffer, come se iniziassimo un nuovo ciclo completamente nuovo.
             buffer[1] = 0; 
             while(cnt < np){ //while(cnt < np)

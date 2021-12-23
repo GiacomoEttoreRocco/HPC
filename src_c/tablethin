@@ -1,0 +1,12 @@
+
+mpirun -np 2 --map-by node --report_bindings ./IMB-MPI1 PingPong
+mpirun -np 2 --map-by socket --report_bindings ./IMB-MPI1 PingPong
+mpirun -np 2 --map-by core --report_bindings ./IMB-MPI1 PingPong
+mpirun -np 2 --mca pml ob1 --mca btl tcp,self --mca btl_tcp_if_include br0run -np 2 --map-by node --report_bindings ./IMB-MPI1 PingPong
+mpirun -np 2 --mca pml ob1 --mca btl tcp,self --mca btl_tcp_if_include br0run -np 2 --map-by socket --report_bindings ./IMB-MPI1 PingPong
+mpirun -np 2 --mca pml ob1 --mca btl tcp,self --mca btl_tcp_if_include br0run -np 2 --map-by core --report_bindings ./IMB-MPI1 PingPong
+
+#INTEL
+
+
+

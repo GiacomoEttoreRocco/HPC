@@ -1,0 +1,84 @@
+loading dependency gnu/9.3.0
+loading dependency numactl/2.0.13
+loading dependency hwloc/2.2.0
+Assembler messages:
+Fatal error: can't create build_MPI1/IMB_output.o: No such file or directory
+make[1]: *** [build_MPI1/IMB_output.o] Error 1
+make: *** [all] Error 2
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./IMB-MPI1
+Node: ct1pg-gnode001
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./IMB-MPI1
+Node: ct1pg-gnode001
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./IMB-MPI1
+Node: ct1pg-gnode001
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./IMB-MPI1
+Node: ct1pg-gnode001
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./IMB-MPI1
+Node: ct1pg-gnode001
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./IMB-MPI1
+Node: ct1pg-gnode001
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./IMB-MPI1
+Node: ct1pg-gnode001
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./IMB-MPI1
+Node: ct1pg-gnode001
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+rm: cannot remove ‘build_MPI1’: Directory not empty
+make[1]: *** [clean] Error 1
+make: *** [clean] Error 2
+This module provide the environment for a full installation of Intel(R) Parallel Studio XE 2020.4.912 Cluster Edition.
+This module is under testing, and it will __likely__ screw up your environment (once you read this, it may be too late).

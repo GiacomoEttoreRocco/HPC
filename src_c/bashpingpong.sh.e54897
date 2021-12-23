@@ -1,0 +1,99 @@
+loading dependency gnu/9.3.0
+loading dependency numactl/2.0.13
+loading dependency hwloc/2.2.0
+[ct1pt-tnode007:03021] MCW rank 0 bound to socket 0[core 0[hwt 0]]: [B/././././././././././.][./././././././././././.]
+--------------------------------------------------------------------------
+WARNING: There was an error initializing an OpenFabrics device.
+
+  Local host:   ct1pt-tnode007
+  Local device: mlx5_0
+--------------------------------------------------------------------------
+[ct1pt-tnode009:05081] MCW rank 1 bound to socket 0[core 0[hwt 0]]: [B/././././././././././.][./././././././././././.]
+[ct1pt-tnode007:03021] 1 more process has sent help message help-mpi-btl-openib.txt / error in device init
+[ct1pt-tnode007:03021] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[ct1pt-tnode007:03051] MCW rank 0 bound to socket 0[core 0[hwt 0]], socket 0[core 1[hwt 0]], socket 0[core 2[hwt 0]], socket 0[core 3[hwt 0]], socket 0[core 4[hwt 0]], socket 0[core 5[hwt 0]], socket 0[core 6[hwt 0]], socket 0[core 7[hwt 0]], socket 0[core 8[hwt 0]], socket 0[core 9[hwt 0]], socket 0[core 10[hwt 0]], socket 0[core 11[hwt 0]]: [B/B/B/B/B/B/B/B/B/B/B/B][./././././././././././.]
+[ct1pt-tnode007:03051] MCW rank 1 bound to socket 1[core 12[hwt 0]], socket 1[core 13[hwt 0]], socket 1[core 14[hwt 0]], socket 1[core 15[hwt 0]], socket 1[core 16[hwt 0]], socket 1[core 17[hwt 0]], socket 1[core 18[hwt 0]], socket 1[core 19[hwt 0]], socket 1[core 20[hwt 0]], socket 1[core 21[hwt 0]], socket 1[core 22[hwt 0]], socket 1[core 23[hwt 0]]: [./././././././././././.][B/B/B/B/B/B/B/B/B/B/B/B]
+--------------------------------------------------------------------------
+WARNING: There was an error initializing an OpenFabrics device.
+
+  Local host:   ct1pt-tnode007
+  Local device: mlx5_0
+--------------------------------------------------------------------------
+[ct1pt-tnode007:03051] 1 more process has sent help message help-mpi-btl-openib.txt / error in device init
+[ct1pt-tnode007:03051] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./IMB-MPI1
+Node: ct1pt-tnode007
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./IMB-MPI1
+Node: ct1pt-tnode007
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./IMB-MPI1
+Node: ct1pt-tnode007
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./IMB-MPI1
+Node: ct1pt-tnode007
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./IMB-MPI1
+Node: ct1pt-tnode007
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./IMB-MPI1
+Node: ct1pt-tnode007
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+This module provide the environment for a full installation of Intel(R) Parallel Studio XE 2020.4.912 Cluster Edition.
+This module is under testing, and it will __likely__ screw up your environment (once you read this, it may be too late).
+gcc: error: build_MPI1/IMB_warm_up.o: No such file or directory
+gcc: error: build_MPI1/IMB_output.o: No such file or directory
+gcc: error: build_MPI1/IMB_pingpong.o: No such file or directory
+gcc: error: build_MPI1/IMB_pingping.o: No such file or directory
+gcc: error: build_MPI1/IMB_allreduce.o: No such file or directory
+gcc: error: build_MPI1/IMB_reduce_scatter.o: No such file or directory
+gcc: error: build_MPI1/IMB_reduce.o: No such file or directory
+gcc: error: build_MPI1/IMB_exchange.o: No such file or directory
+make[1]: *** [IMB-MPI1] Error 1
+make: *** [all] Error 2
+[proxy:0:1@ct1pt-tnode009] HYD_spawn (../../../../../src/pm/i_hydra/libhydra/spawn/intel/hydra_spawn.c:145): execvp error on file ./IMB-MPI1 (No such file or directory)
+[mpiexec@ct1pt-tnode007] wait_proxies_to_terminate (../../../../../src/pm/i_hydra/mpiexec/intel/i_mpiexec.c:531): downstream from host ct1pt-tnode007.hpc was killed by signal 9 (Killed)
+[proxy:0:0@ct1pt-tnode007] HYD_spawn (../../../../../src/pm/i_hydra/libhydra/spawn/intel/hydra_spawn.c:145): execvp error on file ./IMB-MPI1 (No such file or directory)
+[proxy:0:0@ct1pt-tnode007] HYD_spawn (../../../../../src/pm/i_hydra/libhydra/spawn/intel/hydra_spawn.c:145): execvp error on file ./IMB-MPI1 (No such file or directory)
+[proxy:0:1@ct1pt-tnode009] HYD_spawn (../../../../../src/pm/i_hydra/libhydra/spawn/intel/hydra_spawn.c:145): execvp error on file ./IMB-MPI1 (No such file or directory)
+[mpiexec@ct1pt-tnode007] wait_proxies_to_terminate (../../../../../src/pm/i_hydra/mpiexec/intel/i_mpiexec.c:531): downstream from host ct1pt-tnode007.hpc was killed by signal 9 (Killed)
+[proxy:0:0@ct1pt-tnode007] HYD_spawn (../../../../../src/pm/i_hydra/libhydra/spawn/intel/hydra_spawn.c:145): execvp error on file ./IMB-MPI1 (No such file or directory)
+[proxy:0:0@ct1pt-tnode007] HYD_spawn (../../../../../src/pm/i_hydra/libhydra/spawn/intel/hydra_spawn.c:145): execvp error on file ./IMB-MPI1 (No such file or directory)
+[proxy:0:0@ct1pt-tnode007] HYD_spawn (../../../../../src/pm/i_hydra/libhydra/spawn/intel/hydra_spawn.c:145): execvp error on file ./IMB-MPI1 (No such file or directory)
+[proxy:0:0@ct1pt-tnode007] HYD_spawn (../../../../../src/pm/i_hydra/libhydra/spawn/intel/hydra_spawn.c:145): execvp error on file ./IMB-MPI1 (No such file or directory)
